@@ -6,14 +6,14 @@ import platform
 
 from unipath import FSPath as Path
 
-
+print os.environ
 ### Utilities
 
 # The full path to the repository root.
 BASE = Path(__file__).absolute().ancestor(2)
 
 # Far too clever trick to know if we're running on the deployment server.
-PRODUCTION = ('DJANGOPROJECT_DEBUG' not in os.environ)
+PRODUCTION = False #('DJANGOPROJECT_DEBUG' not in os.environ)
 
 # It's a secret to everybody
 with open(BASE.ancestor(1).child('secrets.json')) as handle:

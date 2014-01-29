@@ -5,7 +5,7 @@ from django_www.common_settings import *
 
 ### Django settings
 
-#ALLOWED_HOSTS = ['www.djangoproject.com', 'djangoproject.com', '127.0.0.1'] + SECRETS.get('allowed_hosts', [])
+ALLOWED_HOSTS = ['www.djangoproject.com', 'djangoproject.com', '127.0.0.1', 'localhost'] + SECRETS.get('allowed_hosts', [])
 
 CACHE_MIDDLEWARE_KEY_PREFIX = 'djangoproject'
 
