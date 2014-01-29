@@ -91,15 +91,15 @@ LOGGING = {
         },
     }
 }
-if PRODUCTION:
-    LOGGING["handlers"]["syslog"] = {
-        "formatter": "full",
-        "level": "DEBUG",
-        "class": "logging.handlers.SysLogHandler",
-        "address": "/dev/log",
-        "facility": "local4",
-    }
-    LOGGING["loggers"]["django.request"]["handlers"].append("syslog")
+#if PRODUCTION:
+    #LOGGING["handlers"]["syslog"] = {
+    #    "formatter": "full",
+    #    "level": "DEBUG",
+    #    "class": "logging.handlers.SysLogHandler",
+    #    "address": "/dev/log",
+    #    "facility": "local4",
+    #}
+    #LOGGING["loggers"]["django.request"]["handlers"].append("syslog")
 
 
 MANAGERS = (
